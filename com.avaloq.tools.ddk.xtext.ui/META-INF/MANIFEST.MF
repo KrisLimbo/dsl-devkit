@@ -7,13 +7,16 @@ Bundle-Vendor: Avaloq Group AG
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.avaloq.tools.ddk.xtext,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  org.eclipse.jdt.core,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.search,
  org.eclipse.ui.ide,
- org.apache.commons.lang,
+ org.apache.commons.lang3,
+ org.apache.commons.text,
  com.avaloq.tools.ddk.check.runtime.ui;visibility:=reexport,
  com.google.guava,
  com.avaloq.tools.ddk.xtext.ide,
@@ -32,5 +35,4 @@ Export-Package: com.avaloq.tools.ddk.xtext.ui,
  com.avaloq.tools.ddk.xtext.ui.templates,
  com.avaloq.tools.ddk.xtext.ui.util,
  com.avaloq.tools.ddk.xtext.ui.validation
-Import-Package: org.apache.logging.log4j
 Automatic-Module-Name: com.avaloq.tools.ddk.xtext.ui

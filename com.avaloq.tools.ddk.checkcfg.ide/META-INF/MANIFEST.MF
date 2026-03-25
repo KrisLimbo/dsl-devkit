@@ -10,6 +10,8 @@ Require-Bundle: com.avaloq.tools.ddk.checkcfg.core,
  com.avaloq.tools.ddk.check.runtime.core,
  org.eclipse.xtext,
  org.eclipse.xtext.util,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  com.google.inject,
  org.antlr.runtime,
  org.eclipse.xtext.ide,
@@ -20,6 +22,5 @@ Require-Bundle: com.avaloq.tools.ddk.checkcfg.core,
  org.eclipse.lsp4j
 Export-Package: com.avaloq.tools.ddk.checkcfg.ide.contentassist.antlr,
  com.avaloq.tools.ddk.checkcfg.ide.contentassist.antlr.internal
-Import-Package: org.apache.log4j,
- org.apache.logging.log4j
+Import-Package: org.apache.log4j
 Automatic-Module-Name: com.avaloq.tools.ddk.checkcfg.ide

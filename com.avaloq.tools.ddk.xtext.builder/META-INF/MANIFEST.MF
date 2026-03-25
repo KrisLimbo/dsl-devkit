@@ -5,6 +5,8 @@ Bundle-SymbolicName: com.avaloq.tools.ddk.xtext.builder;singleton:=true
 Bundle-Version: 17.2.0.qualifier
 Bundle-Vendor: Avaloq Group AG
 Require-Bundle: org.eclipse.xtext.builder,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  org.eclipse.xtext.ui,
  com.avaloq.tools.ddk,
  com.avaloq.tools.ddk.xtext,
@@ -15,5 +17,4 @@ Export-Package: com.avaloq.tools.ddk.xtext.builder,
  com.avaloq.tools.ddk.xtext.builder.resourceloader,
  com.avaloq.tools.ddk.xtext.builder.tracing,
  com.avaloq.tools.ddk.xtext.extensions
-Import-Package: org.apache.logging.log4j
 Automatic-Module-Name: com.avaloq.tools.ddk.xtext.builder

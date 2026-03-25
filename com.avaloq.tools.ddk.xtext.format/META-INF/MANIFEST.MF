@@ -15,6 +15,8 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.equinox.common;resolution:=optional,
  com.avaloq.tools.ddk.xtext,
  org.eclipse.xtext.util,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
  org.antlr.runtime,
@@ -26,7 +28,7 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.objectweb.asm;resolution:=optional
-Import-Package: org.apache.logging.log4j,org.apache.log4j
+Import-Package: org.apache.log4j
 Export-Package: com.avaloq.tools.ddk.xtext.format,
  com.avaloq.tools.ddk.xtext.format.format,
  com.avaloq.tools.ddk.xtext.format.format.impl,

@@ -6,6 +6,8 @@ Bundle-Version: 17.2.0.qualifier
 Bundle-Vendor: Avaloq Group AG
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: org.eclipse.jface,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  org.eclipse.ui.views,
  org.eclipse.emf.codegen.ecore,
  org.eclipse.xtext,
@@ -34,6 +36,5 @@ Export-Package: com.avaloq.tools.ddk.xtext.generator.builder,
  com.avaloq.tools.ddk.xtext.generator.resourceFactory,
  com.avaloq.tools.ddk.xtext.generator.ide.contentAssist,
  com.avaloq.tools.ddk.xtext.generator.parser.common
-Import-Package: org.apache.logging.log4j
 Eclipse-ExtensibleAPI: true
 Automatic-Module-Name: com.avaloq.tools.ddk.xtext.generator

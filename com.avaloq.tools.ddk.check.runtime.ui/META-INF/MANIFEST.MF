@@ -6,13 +6,14 @@ Bundle-Version: 17.2.0.qualifier
 Bundle-Activator: com.avaloq.tools.ddk.check.runtime.ui.internal.Activator
 Bundle-Vendor: Avaloq Group AG
 Require-Bundle: org.eclipse.ui,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  org.eclipse.core.runtime,
  org.eclipse.xtext.ui,
  com.avaloq.tools.ddk.check.runtime.core,
  org.eclipse.ui.ide
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
-Import-Package: org.apache.logging.log4j
 Export-Package: com.avaloq.tools.ddk.check.runtime.ui.editor,
  com.avaloq.tools.ddk.check.runtime.ui.editor.model,
  com.avaloq.tools.ddk.check.runtime.ui.quickfix,

@@ -8,6 +8,8 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.apache.commons.logging;resolution:=optional;visibility:=reexport,
  org.eclipse.xtext.xtext.generator,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
@@ -25,7 +27,6 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  com.avaloq.tools.ddk.check.core,
  org.eclipse.xtext.xbase.lib
 Import-Package: org.apache.log4j,
- org.apache.logging.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: com.avaloq.tools.ddk.check,

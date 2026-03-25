@@ -13,6 +13,8 @@ Require-Bundle: com.avaloq.tools.ddk.xtext.builder,
  com.avaloq.tools.ddk.check.core,
  com.avaloq.tools.ddk.check.ide,
  com.avaloq.tools.ddk.check.runtime.core,
+ org.apache.logging.log4j.core,
+ org.apache.logging.log4j.api,
  org.antlr.runtime,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,
@@ -40,6 +42,5 @@ Export-Package: com.avaloq.tools.ddk.check.ui;x-friends:="com.avaloq.tools.ddk.c
  com.avaloq.tools.ddk.check.ui.wizard,
  com.avaloq.tools.ddk.check.ui.quickfix,
  com.avaloq.tools.ddk.check.ui.editor
-Import-Package: org.apache.log4j,
- org.apache.logging.log4j
+Import-Package: org.apache.log4j
 Automatic-Module-Name: com.avaloq.tools.ddk.check.ui
