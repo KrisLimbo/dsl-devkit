@@ -11,8 +11,8 @@ Require-Bundle: com.avaloq.tools.ddk.xtext.export,
  com.google.inject,
  com.avaloq.tools.ddk.xtext.test.core,
  com.avaloq.tools.ddk.xtext,
- junit-jupiter-api,
- junit-jupiter-engine,
+ junit-jupiter-api;bundle-version="[5.14.3,6.0.0)",
+ junit-jupiter-engine;bundle-version="[5.14.3,6.0.0)",
  junit-platform-suite-api
 Export-Package: com.avaloq.tools.ddk.xtext.test.export
 Automatic-Module-Name: com.avaloq.tools.ddk.xtext.export.test

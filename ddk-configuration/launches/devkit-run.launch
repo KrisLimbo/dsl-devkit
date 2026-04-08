@@ -293,7 +293,6 @@
 <setEntry value="org.hamcrest.library@default:default"/>
 <setEntry value="org.hamcrest.text@default:default"/>
 <setEntry value="org.hamcrest@default:default"/>
-<setEntry value="org.junit@default:default"/>
 <setEntry value="org.mockito.mockito-core@default:default"/>
 <setEntry value="org.objenesis@default:default"/>
 <setEntry value="org.sat4j.core@default:default"/>

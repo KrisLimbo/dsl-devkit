@@ -25,7 +25,7 @@ Require-Bundle: com.avaloq.tools.ddk.xtext,
  com.avaloq.tools.ddk.check.runtime.core,
  org.eclipse.emf.common,
  com.avaloq.tools.ddk,
- junit-jupiter-api
+ junit-jupiter-api;bundle-version="[5.14.3,6.0.0)"
 Import-Package: org.slf4j, org.apache.logging.log4j
 Export-Package: com.avaloq.tools.ddk.xtext.test,
  com.avaloq.tools.ddk.xtext.test.contentassist,

@@ -16,7 +16,7 @@ Require-Bundle: com.avaloq.tools.ddk.test.core,
  org.mockito.mockito-core,
  com.avaloq.tools.ddk.xtext.ui,
  org.eclipse.xtext.xtext.generator,
- junit-jupiter-api,
+ junit-jupiter-api;bundle-version="[5.14.3,6.0.0)",
  junit-jupiter-engine,
  junit-platform-suite-api
 Export-Package: com.avaloq.tools.ddk.xtext.generator.test.generator

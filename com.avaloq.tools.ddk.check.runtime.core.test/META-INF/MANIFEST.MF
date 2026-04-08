@@ -11,8 +11,8 @@ Require-Bundle: org.eclipse.ui,
  com.avaloq.tools.ddk.test.ui,
  com.avaloq.tools.ddk.check.runtime.core,
  com.google.guava,
- junit-jupiter-api,
- junit-jupiter-engine,
+ junit-jupiter-api;bundle-version="[5.14.3,6.0.0)",
+ junit-jupiter-engine;bundle-version="[5.14.3,6.0.0)",
  junit-platform-suite-api
 Export-Package: com.avaloq.tools.ddk.check.runtime.test.core
 Import-Package: org.mockito,

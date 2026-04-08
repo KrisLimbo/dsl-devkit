@@ -17,10 +17,9 @@ Require-Bundle: com.avaloq.tools.ddk.check.runtime.core,
  org.eclipse.ui.workbench;resolution:=optional,
  org.eclipse.xtend.lib,
  org.eclipse.xtext.xbase.lib,
- junit-jupiter-api,
- junit-jupiter-engine,
- junit-platform-suite-api,
- junit-vintage-engine
+ junit-jupiter-api;bundle-version="[5.14.3,6.0.0)",
+ junit-jupiter-engine;bundle-version="[5.14.3,6.0.0)",
+ junit-platform-suite-api
 Import-Package: org.hamcrest.core
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: com.avaloq.tools.ddk.check.test.runtime,

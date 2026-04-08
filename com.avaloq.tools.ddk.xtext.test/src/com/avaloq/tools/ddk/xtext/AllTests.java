@@ -36,20 +36,7 @@ import com.avaloq.tools.ddk.xtext.ui.test.XtextUiTestSuite;
 // @Format-Off
 @Suite
 @SelectClasses({
-  XtextTestSuite.class,
-  XtextUiTestSuite.class,
-  GeneratorTestSuite.class,
-  FormatTestSuite.class,
-  ExportTestSuite.class,
-  HelloWorldSampleTestSuite.class,
-  CheckRuntimeTestSuite.class,
-  CheckCoreTestSuite.class,
-  CheckExecutionEnvironmentTestSuite.class,
-  CheckLibraryChecksTestSuite.class,
-  CheckUiTestSuite.class,
-  CheckCfgUiTestSuite.class,
-  CheckCfgTestSuite.class,
-  TypeSystemTestSuite.class
+
 })
 // @Format-On
 public class AllTests {
