@@ -23,7 +23,6 @@ import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.Statement;
 
-import com.avaloq.tools.ddk.test.core.AbstractSystemTest;
 import com.avaloq.tools.ddk.test.core.junit.runners.ClassRunner;
 import com.avaloq.tools.ddk.test.ui.swtbot.CoreSwtbotTools;
 
@@ -59,7 +58,7 @@ public class SwtBotRecordingTestRunner extends ClassRunner {
    * @throws InitializationError
    *           if any initialization failed
    */
-  public SwtBotRecordingTestRunner(final Class<? extends AbstractSystemTest> testClass) throws InitializationError {
+  public SwtBotRecordingTestRunner(final Class<? extends com.avaloq.tools.ddk.test.core.jupiter.AbstractSystemTest> testClass) throws InitializationError {
     super(testClass);
     CoreSwtbotTools.initializePreferences();
     testRunRecording = new TestRunRecording(getTestClass().getJavaClass(), SWTBotPreferences.SCREENSHOTS_DIR);
