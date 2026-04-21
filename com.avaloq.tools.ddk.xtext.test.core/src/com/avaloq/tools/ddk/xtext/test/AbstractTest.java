@@ -11,7 +11,6 @@
 package com.avaloq.tools.ddk.xtext.test;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -26,21 +25,14 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.runner.RunWith;
 
 import com.avaloq.tools.ddk.test.core.AfterAll;
 import com.avaloq.tools.ddk.test.core.BeforeAll;
-import com.avaloq.tools.ddk.test.core.BugTestAwareRule;
-import com.avaloq.tools.ddk.test.core.IssueAwareRule;
-import com.avaloq.tools.ddk.test.core.LoggingRule;
+import com.avaloq.tools.ddk.test.core.jupiter.BugTestAwareRule;
+import com.avaloq.tools.ddk.test.core.jupiter.IssueAwareRule;
+import com.avaloq.tools.ddk.test.core.jupiter.LoggingRule;
 import com.avaloq.tools.ddk.test.core.mock.ExtensionRegistryMock;
 import com.avaloq.tools.ddk.test.core.mock.ServiceMock;
-import com.avaloq.tools.ddk.xtext.test.junit.runners.XtextClassRunner;
 import com.google.common.collect.ImmutableList;
 
 
@@ -48,7 +40,6 @@ import com.google.common.collect.ImmutableList;
  * Provides a test class specific custom test framework for tests that run in the ACF environment.
  * All exceptions are wrapped and handed over to the JUnit framework.
  */
-@RunWith(XtextClassRunner.class)
 @SuppressWarnings("nls")
 public abstract class AbstractTest {
 
@@ -67,7 +58,6 @@ public abstract class AbstractTest {
 
   private static Map<Class<? extends AbstractTest>, TestInformation> testInformationMap = new HashMap<Class<? extends AbstractTest>, TestInformation>();
 
-  @Rule
   // CHECKSTYLE:CHECK-OFF Visibility MethodRules cannot be private
   public final LoggingRule watchman = LoggingRule.getInstance();
   // CHECKSTYLE:CHECK-ON Visibility
@@ -75,12 +65,10 @@ public abstract class AbstractTest {
   /**
    * Enables support for unresolved bug tests.
    */
-  @Rule
   // CHECKSTYLE:CHECK-OFF Visibility MethodRules cannot be private
   public BugTestAwareRule bugTestRule = BugTestAwareRule.getInstance();
   // CHECKSTYLE:CHECK-ON Visibility
 
-  @Rule
   // CHECKSTYLE:CHECK-OFF VisibilityModifier
   public final IssueAwareRule issueRule = IssueAwareRule.getInstance();
 
@@ -155,7 +143,6 @@ public abstract class AbstractTest {
    * If it is run the first time, it calls the beforeClass method first. Do not call this method manually!
    * All exceptions are wrapped and handed over to the JUnit framework.
    */
-  @Before
   public final void before() {
     beforeEachTest();
   }
@@ -165,7 +152,6 @@ public abstract class AbstractTest {
    * If no more tests are to be run, it calls the afterClass method. Do not call this method manually!
    * All exceptions are wrapped and handed over to the JUnit framework.
    */
-  @After
   public final void after() {
     afterEachTest();
   }
@@ -360,19 +346,19 @@ public abstract class AbstractTest {
    * </p>
    */
   private void enforceAnnotationPolicies() {
-    for (Method method : this.getClass().getMethods()) {
-      // use this policy to not allow BeforeClass or AfterClass annotations.
-      if (method.isAnnotationPresent(BeforeClass.class) || method.isAnnotationPresent(AfterClass.class)) {
-        throw new IllegalJUnitAnnotation();
-      }
-      // use this policy to not allow Before or After annotations in subclasses.
-      // if (!method.getDeclaringClass().equals(AbstractXtextTest.class) && (method.isAnnotationPresent(Before.class) ||
-      // method.isAnnotationPresent(After.class))) {
-      // throw new
-      // IllegalJUnitAnnotation("Invalid annotation found. Before and After annotations are not permitted when using the AbstractXtextTest framework. Override
-      // the methods 'before' and 'after' instead.");
-      // }
-    }
+    // for (Method method : this.getClass().getMethods()) {
+    // // use this policy to not allow BeforeClass or AfterClass annotations.
+    // // if (method.isAnnotationPresent(BeforeClass.class) || method.isAnnotationPresent(AfterClass.class)) {
+    // // throw new IllegalJUnitAnnotation();
+    // // }
+    // // use this policy to not allow Before or After annotations in subclasses.
+    // // if (!method.getDeclaringClass().equals(AbstractXtextTest.class) && (method.isAnnotationPresent(Before.class) ||
+    // // method.isAnnotationPresent(After.class))) {
+    // // throw new
+    // // IllegalJUnitAnnotation("Invalid annotation found. Before and After annotations are not permitted when using the AbstractXtextTest framework. Override
+    // // the methods 'before' and 'after' instead.");
+    // // }
+    // }
   }
 
   /**

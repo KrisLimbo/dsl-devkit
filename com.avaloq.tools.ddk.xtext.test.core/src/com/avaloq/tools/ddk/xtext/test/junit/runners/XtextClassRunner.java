@@ -42,12 +42,11 @@ import com.avaloq.tools.ddk.test.core.BeforeAll;
 import com.avaloq.tools.ddk.test.core.BugTest;
 import com.avaloq.tools.ddk.test.core.IntegrationTest;
 import com.avaloq.tools.ddk.test.core.ModuleTest;
-import com.avaloq.tools.ddk.test.core.MultipleTestProblems;
 import com.avaloq.tools.ddk.test.core.PerformanceTest;
 import com.avaloq.tools.ddk.test.core.Retry;
 import com.avaloq.tools.ddk.test.core.SystemTest;
 import com.avaloq.tools.ddk.test.core.UnitTest;
-import com.avaloq.tools.ddk.test.core.junit.runners.SorterUtil;
+import com.avaloq.tools.ddk.test.core.jupiter.MultipleTestProblems;
 import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;
@@ -120,7 +119,7 @@ public class XtextClassRunner extends XtextRunner {
    */
   public XtextClassRunner(final Class<?> klass) throws InitializationError {
     super(klass);
-    SorterUtil.getInstance().initializeSorter(this);
+    // SorterUtil.getInstance().initializeSorter(this);
     testRuns = Integer.parseInt(System.getProperty(PROPERTY_TEST_RUNS, "1")); //$NON-NLS-1$
     testRetries = Integer.parseInt(System.getProperty(PROPERTY_TEST_RETRIES, "0")); //$NON-NLS-1$
     unstableFail = Boolean.parseBoolean(System.getProperty(PROPERTY_UNSTABLE_FAIL, "false")); //$NON-NLS-1$

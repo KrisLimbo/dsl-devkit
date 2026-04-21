@@ -10,9 +10,9 @@
  *******************************************************************************/
 package com.avaloq.tools.ddk.xtext.test.conversion;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.Collection;
 import java.util.List;
@@ -60,7 +60,7 @@ public abstract class AbstractValueConverterServiceTest extends AbstractXtextTes
    */
   protected IGrammarAccess getGrammarAccess() {
     final IGrammarAccess grammarAccess = getXtextTestUtil().get(IGrammarAccess.class);
-    assertNotNull("The IGrammarAccess must be registered in order to test the IValueConverterService.", grammarAccess);
+    assertNotNull(grammarAccess, "The IGrammarAccess must be registered in order to test the IValueConverterService.");
     return grammarAccess;
   }
 
@@ -99,7 +99,7 @@ public abstract class AbstractValueConverterServiceTest extends AbstractXtextTes
    */
   protected IValueConverterService getValueConverterService() {
     final IValueConverterService valueConverterService = getXtextTestUtil().get(IValueConverterService.class);
-    assertNotNull("The IValueConverterService must be registered in order to test it.", valueConverterService);
+    assertNotNull(valueConverterService, "The IValueConverterService must be registered in order to test it.");
     return valueConverterService;
   }
 
@@ -113,7 +113,7 @@ public abstract class AbstractValueConverterServiceTest extends AbstractXtextTes
    */
   protected void assertToStringConvertedEquals(final AbstractRule rule, final String value) {
     final String actual = getValueConverterService().toString(value, rule.getName());
-    assertEquals("Converted value must be equal to input value.", value, actual);
+    assertEquals(value, actual, "Converted value must be equal to input value.");
   }
 
   /**
