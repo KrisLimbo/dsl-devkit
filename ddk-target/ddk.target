@@ -64,7 +64,6 @@
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <repository location="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/release/4.39.0"/>
     <unit id="junit-jupiter-api" version="5.14.3"/>
-    <unit id="junit-vintage-engine" version="5.14.3"/>
     <unit id="junit-platform-suite-engine" version="1.14.3"/>
   </location>
 </locations>
