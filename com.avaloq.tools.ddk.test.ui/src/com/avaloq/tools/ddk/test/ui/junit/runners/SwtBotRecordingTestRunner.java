@@ -23,8 +23,8 @@ import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.Statement;
 
-import com.avaloq.tools.ddk.test.core.AbstractSystemTest;
 import com.avaloq.tools.ddk.test.core.junit.runners.ClassRunner;
+import com.avaloq.tools.ddk.test.core.jupiter.AbstractSystemTest;
 import com.avaloq.tools.ddk.test.ui.swtbot.CoreSwtbotTools;
 
 
