@@ -7,6 +7,7 @@
   <unit id="org.eclipse.swtbot.feature.group" version="0.0.0"/>
   <unit id="org.eclipse.swtbot.ide.feature.group" version="0.0.0"/>
   <unit id="org.eclipse.swtbot.eclipse.test.junit.feature.group" version="0.0.0"/>
+  <unit id="org.eclipse.swtbot.junit5.feature.group" version="0.0.0"/>
   <repository location="http://download.eclipse.org/technology/swtbot/releases/4.2.1/"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
@@ -14,6 +15,8 @@
     <unit id="org.eclipse.jdt.source.feature.group" version="0.0.0"/>
     <unit id="org.eclipse.platform.feature.group" version="0.0.0"/>
     <unit id="org.eclipse.platform.source.feature.group" version="0.0.0"/>
+    <unit id="org.apache.lucene.analysis-common" version="0.0.0"/>
+    <unit id="org.apache.lucene.core" version="0.0.0"/>
     <repository location="https://download.eclipse.org/eclipse/updates/4.34/"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
@@ -63,6 +66,7 @@
     <repository location="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/release/4.39.0"/>
     <unit id="junit-jupiter-api" version="5.14.3"/>
     <unit id="junit-vintage-engine" version="5.14.3"/>
+    <unit id="junit-platform-suite-engine" version="1.14.3"/>
   </location>
 </locations>
 </target>
