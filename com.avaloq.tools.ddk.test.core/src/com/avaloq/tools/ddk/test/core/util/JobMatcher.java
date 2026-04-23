@@ -10,6 +10,10 @@
  *******************************************************************************/
 package com.avaloq.tools.ddk.test.core.util;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.fail;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -19,7 +23,6 @@ import java.util.concurrent.TimeUnit;
 import org.eclipse.core.runtime.jobs.IJobChangeEvent;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.core.runtime.jobs.JobChangeAdapter;
-import org.junit.Assert;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableList;
@@ -214,7 +217,7 @@ public class JobMatcher extends JobChangeAdapter {
    *          the expected number of jobs
    */
   public final void assertNumberOfNewJobs(final int expected) {
-    Assert.assertEquals("Wrong number of jobs were scheduled", expected, newJobs.size());
+    assertEquals(expected, newJobs.size(), "Wrong number of jobs were scheduled");
   }
 
   /**
@@ -227,13 +230,13 @@ public class JobMatcher extends JobChangeAdapter {
   public final void assertNewJobsFinished() {
     try {
       List<Job> expectedJobs = Lists.newArrayList(newJobs);
-      Assert.assertFalse("No matching new jobs were scheduled: " + finder, expectedJobs.isEmpty());
+      assertFalse(expectedJobs.isEmpty(), "No matching new jobs were scheduled: " + finder);
       expectedJobs.removeAll(finishedJobs);
       while (!expectedJobs.isEmpty()) {
         try {
           Job job = getNextJob();
           if (job == null) {
-            Assert.fail("Expected new jobs did not finish after " + waitTimeout + " milliseconds: " + expectedJobs);
+            fail("Expected new jobs did not finish after " + waitTimeout + " milliseconds: " + expectedJobs);
           }
           expectedJobs.remove(job);
         } catch (InterruptedException e) {
@@ -261,7 +264,7 @@ public class JobMatcher extends JobChangeAdapter {
         try {
           Job job = getNextJob();
           if (job == null) {
-            Assert.fail("Existing jobs did not finish after " + waitTimeout + " milliseconds: " + expectedJobs);
+            org.junit.jupiter.api.Assertions.fail("Existing jobs did not finish after " + waitTimeout + " milliseconds: " + expectedJobs); //$NON-NLS-1$ //$NON-NLS-2$
           }
           expectedJobs.remove(job);
         } catch (InterruptedException e) {
